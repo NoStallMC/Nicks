@@ -110,7 +110,7 @@ public class NickColorManager implements Listener {
     public void resetPlayerNickname(Player player) {
         String originalName = player.getName();
         player.setDisplayName(originalName);
-        playerData.put(player.getName(), new String[] { null, "WHITE" }); // Resetting nickname and color
+        playerData.put(player.getName(), new String[] { player.getName(), "WHITE" }); // Resetting nickname and color
         savePlayerData();
     }
 
