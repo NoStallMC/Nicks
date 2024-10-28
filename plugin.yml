@@ -1,0 +1,46 @@
+author: matejkoo
+description: Adds nicks and colors
+main: main.java.org.matejko.plugin.Nick
+name: Nicks
+version: 5
+commands:
+  nickname:
+    description: Set or change your nickname.
+    #usage: /nickname <nickname>
+    permission: nicks.nickname
+    permission-message: You do not have permission to use this command.
+  rename:
+    description: Rename another player (admin command).
+    #usage: /rename <player> <nickname>
+    permission: nicks.rename
+    permission-message: You do not have permission to rename other players.
+  color:
+    description: Change your nickname color.
+    #usage: /color <color>
+    permission: nicks.color
+    permission-message: You do not have permission to use this command.
+  realname:
+    description: Returns the real name of a player based on their nickname.
+    #usage: /realname <nickname>
+  nickreset:
+    description: Reset your nickname to the original name
+    #usage: /nickreset
+    permission: nicks.nickreset
+    permission-message: You do not have permission to reset your nickname.
+
+permissions:
+  nicks.nickname:
+    description: Allows a player to set or change their nickname.
+    default: true
+  nicks.rename.others:
+    description: Allows a player to rename other players.
+    default: op
+  nicks.color:
+    description: Allows a player to change their nickname color.
+    default: true
+  nicks.realname:
+    description: Allows players to use the /realname command
+    default: true
+  nicks.nickreset:
+    description: Allows players to reset their nickname to the original name.
+    default: true
